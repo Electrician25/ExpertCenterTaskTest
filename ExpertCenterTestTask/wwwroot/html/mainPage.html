@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href = "/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href = "/css/mainPageStile.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+        <div class = "PriseListLists">
+            <h1>Прайсы</h1>
+            <button type="button" class="btn btn-primary" id="add" onclick="addNewPriceList();">Прайс-лист</button>
+            <div class = "PriseLists">
+                <div class = "relative">
+                    <div class = "ColumnsId" id="ColumnsId"> 
+                        <p>№</p>
+                        <div class = "ColmnsName" id="ColmnsName">
+                            <p class="Name">Название</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/js/PriceList/renderPriceList.js"></script>
+    <script src="/js/PriceList/priceListPagePath.js"></script>
+</html>

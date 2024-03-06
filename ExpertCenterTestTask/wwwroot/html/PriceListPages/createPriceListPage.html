@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href = "/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href = "/css/mainPageStile.css" rel="stylesheet" type="text/css">
+    <link href = "/css/createPriceListStyle.css" rel="stylesheet" type="text/css">
+    <link href = "/css/createPriceListinput.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+        <div class = "PriseListLists">
+            <div class = "CreatePriceList">
+                <h1>Добавление прайс-листа</h1>
+                <button type="button" class="btn btn-success" id="add" onclick="createPriceList();">Продолжить</button>
+                <button type="button" class="btn btn-secondary" id="cancle" onclick="">Отмена</button>
+                <div class = "inputPriceListName">
+                    <p class = "inputName" id="add">Название прайс-листа *</p>
+                    <input class="inputPriceListName1" id = "priceListName" type="text" name="name">
+                </div>
+                <div class="listInputs" id="listInputs">
+                    <div class = "defColumn" id = "defColumn">
+                        <a id = "h">Колонка 1</a>
+                        <input class="inputName1" id = "inputName1" type="text" name="name"></input>
+                        <div class="dropdown" id = "dropdown">
+                            <select name="one" class="dropdown-select" id="listFunc1">
+                              <option value="1" >Число</option>
+                              <option value="2" >Однострочный текст</option>
+                              <option value="3" >Многострочный текст</option>
+                            </select>
+                          </div>
+                        <button type="button" disabled = "false" class="btn btn-danger">Удалить</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-warning" id="addColumn" onclick="addColumn();">Длбавить колонку</button>
+            </div>
+        </div>
+    </body>
+    <script src="/js/PriceList/createPriceList.js"></script>
+</html>

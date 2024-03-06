@@ -1,0 +1,61 @@
+.PriseListLists{
+    width: 800px;
+    height: 500px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.PriseLists{
+    width: 775px;
+    height: 370px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.ColumnsId{
+    text-align:center;
+    position:absolute;
+    top:0;
+    width: 150px;
+    height: 35px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.ColmnsName
+{
+    padding-right:center;
+    position:absolute;
+    top:0;
+    width: 773px;
+    height: 35px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.relative
+{
+    position:relative
+}
+
+.Name{
+    text-align:center;
+}
+
+.NameColumnTable{
+    padding-left:center;
+    top:0;
+    text-align:center;
+    width: 772px;
+    height: 35px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.IdColumnTable{
+    text-align:center;
+    width: 150px;
+    height: 35px;
+    border: 1px solid rgb(0, 0, 0);
+}

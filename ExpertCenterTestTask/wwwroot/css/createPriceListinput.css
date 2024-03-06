@@ -1,0 +1,30 @@
+.inputName1 {
+    margin: 5px;
+    padding: 17px;
+    height: 17px;
+}
+
+.inputId1 {
+    margin: 2px;
+    padding: 17px;
+    height: 17px;
+}
+
+.defColumn {
+    height: 45px;
+}
+
+
+.defColumn1 {
+    height: 45px;
+}
+
+.inputPriceListName {
+    height: 85px;
+}
+
+.dropdown {
+    display: inline-block;
+    height: 20px;
+    width: 220px;
+}

@@ -1,0 +1,47 @@
+﻿@model ExpertCenterTestTask.Pages.Controls.ServerNotificationControlModel
+@using ExpertCenterTestTask.Hubs;
+@using ExpertCenterTestTask.Notifiers;
+
+<script>
+    class serverNotificationService {
+        constructor() {
+            this.subscriptions = {};
+        }
+
+        subscribe(groupName, handler) {
+            this.subscriptions[groupName] = handler;
+            return this;
+        }
+
+        async start() {
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl('@NotificationHub.Path')
+                .configureLogging(signalR.LogLevel.Information)
+                .build();
+
+            async function start() {
+                try {
+                    await connection.start();
+                    console.log("SignalR Connected.");
+                } catch (err) {
+                    console.log(err);
+                    setTimeout(start, 5000);
+                }
+            };
+
+            connection.onclose(async () => {
+                await start();
+            });
+
+            connection.on('@Notifier.ReceiveClientMethodName', async (groupName, dataType, data) => {
+                await this.subscriptions[groupName](dataType, data);
+            });
+
+            await start();
+
+            for (const subscription in this.subscriptions) {
+                await connection.invoke('@nameof(NotificationHub.SubsrcribeAsync)', subscription);
+            }
+        }
+    }
+</script>
