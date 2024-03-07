@@ -17,7 +17,7 @@ namespace ExpertCenterTestTask.Controllers
 
 		[HttpPost]
 		[Route("additem")]
-		async public Task<Item> Additems(Item item)
+		async public Task<Item> Additem(Item item)
 		{
 			return await _ItemCrud.AddItemAsync(item);
 		}

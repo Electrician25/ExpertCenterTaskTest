@@ -13,7 +13,7 @@ namespace ExpertCenterTestTask.CrudServices
 			_ApplicationContest = applicationContest;
 		}
 
-		async public Task<Column> GetColumnById(int id)
+		async public Task<Column> GetColumnByIdAsync(int id)
 		{
 			var columnId = await _ApplicationContest.Columns.FirstOrDefaultAsync(i => i.Id == id)
 				?? throw new Exception();
@@ -21,7 +21,7 @@ namespace ExpertCenterTestTask.CrudServices
 			return columnId;
 		}
 
-		public Column[] GetAllPriceListColumn(string currecntColumnCount)
+		public Column[] GetAllPriceListColumnsAsync(string currecntColumnCount)
 		{
 			var toInt = int.Parse(currecntColumnCount);
 

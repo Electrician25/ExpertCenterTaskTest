@@ -24,23 +24,23 @@ namespace ExpertCenterTestTask.Controllers
 
 		[HttpGet]
 		[Route("getall")]
-		async public Task<ColumnData[]> GetAllCustomColumn()
+		async public Task<ColumnData[]> GetAllCustomColumns()
 		{
-			return await _columnDataCrud.GetAllCustomColumn();
+			return await _columnDataCrud.GetAllCustomColumns();
 		}
 
 		[HttpPost]
 		[Route("add")]
 		async public Task<ColumnData> AddCustomColumn(ColumnData columnData)
 		{
-			return await _columnDataCrud.AddNewCustomColumn(columnData);
+			return await _columnDataCrud.AddNewCustomColumnAsync(columnData);
 		}
 
 		[HttpDelete]
 		[Route("delete/{id}")]
 		public async Task<ColumnData> DeleteCustomColumn(int id)
 		{
-			return await _columnDataCrud.DeleteCustomColumn(id);
+			return await _columnDataCrud.DeleteCustomColumnAsync(id);
 		}
 	}
 }

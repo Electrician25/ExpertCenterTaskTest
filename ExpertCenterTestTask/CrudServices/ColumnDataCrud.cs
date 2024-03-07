@@ -20,12 +20,12 @@ namespace ExpertCenterTestTask.CrudServices
 				?? throw new Exception();
 		}
 
-		async public Task<ColumnData[]> GetAllCustomColumn()
+		async public Task<ColumnData[]> GetAllCustomColumns()
 		{
 			return await _applicationContext.ColumnDatas.ToArrayAsync();
 		}
 
-		async public Task<ColumnData> AddNewCustomColumn(ColumnData columnData)
+		async public Task<ColumnData> AddNewCustomColumnAsync(ColumnData columnData)
 		{
 			if (columnData is null)
 			{
@@ -38,7 +38,7 @@ namespace ExpertCenterTestTask.CrudServices
 			return columnData;
 		}
 
-		public async Task<ColumnData> DeleteCustomColumn(int id)
+		public async Task<ColumnData> DeleteCustomColumnAsync(int id)
 		{
 			var columnId = await _applicationContext.ColumnDatas.FindAsync(id)
 				?? throw new Exception();

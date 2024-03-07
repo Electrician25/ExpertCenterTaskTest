@@ -19,7 +19,7 @@ namespace ExpertCenterTestTask.Controllers
 		[Route("get/{id}")]
 		async public Task<Column> GetColumn(int id)
 		{
-			return await _columnCrud.GetColumnById(id);
+			return await _columnCrud.GetColumnByIdAsync(id);
 		}
 
 		[HttpPost]
@@ -33,7 +33,7 @@ namespace ExpertCenterTestTask.Controllers
 		[Route("currentcolumns")]
 		public Column[] AddColumn1([FromQuery] string count)
 		{
-			return _columnCrud.GetAllPriceListColumn(count);
+			return _columnCrud.GetAllPriceListColumnsAsync(count);
 		}
 	}
 }
