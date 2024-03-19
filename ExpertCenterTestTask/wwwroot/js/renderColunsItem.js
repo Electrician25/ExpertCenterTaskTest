@@ -5,7 +5,7 @@ async function renderColumnsPage() {
     let parse = count.split('=');
     let current = parse[1].toString();
 
-    let priceLists = await sendGetListsRequest(`https://localhost:7043/api/currentcolumns?count=${current}`);
+    let priceLists = await sendGetListsRequest(`http://localhost:25545/api/currentcolumns?count=${current}`);
 
     for(let i = 0; i < priceLists.length; i++)
     {

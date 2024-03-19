@@ -11,7 +11,7 @@ const createPriceList = async () => {
             name: second.next().value,
             kind: frist.next().value
         }); 
-        await sendPostColumnRequest(json,"https://localhost:7043/api/post");
+        await sendPostColumnRequest(json,"http://localhost:25545/api/post");
     }
 
     let listName = document.getElementById("priceListName").value;
@@ -19,10 +19,10 @@ const createPriceList = async () => {
     let json1 = JSON.stringify({
         name: listName,
     }); 
-    await sendPostColumnRequest1(json1,"https://localhost:7043/api/priceList/add");
+    await sendPostColumnRequest1(json1,"http://localhost:25545/api/priceList/add");
 
     document.getElementById('add')
-    addEventListener('click', () => location = `https://localhost:7043/api/html/AddItemPageLast?id=${length}`);
+    addEventListener('click', () => location = `http://localhost:25545/api/html/AddItemPageLast?id=${length}`);
 }
 
 function* findKindColumn()

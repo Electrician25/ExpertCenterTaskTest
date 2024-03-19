@@ -1,0 +1,21 @@
+﻿services:
+  testtask:
+    container_name: testtask-aspnet_container
+    build:
+      dockerfile: ./Dockerfile
+    image: testtask-aspnet_image
+    ports:
+      - 25545:5001
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1
+    ports:
+      - 5432:5001
+    volumes: 
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
+    driver: local

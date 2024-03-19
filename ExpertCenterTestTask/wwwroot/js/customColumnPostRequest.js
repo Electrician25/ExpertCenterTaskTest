@@ -3,7 +3,7 @@ const createList = async () => {
         name: document.getElementById("inputName1").value,
         vendorCode: document.getElementById("inputName2").value
     }); 
-    await sendPostColumnRequest(json,"https://localhost:7043/api/item/additem");
+    await sendPostColumnRequest(json,"http://localhost:25545/api/item/additem");
 }
 
 function sendPostColumnRequest(json, uri) {

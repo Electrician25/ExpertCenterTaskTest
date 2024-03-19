@@ -2,5 +2,5 @@ addNewPriceList();
 
 function addNewPriceList() {
     document.getElementById('add')
-    .addEventListener('click', () => location = 'https://localhost:7043/api/html/PriceListCreate');
+        .addEventListener('click', () => location = 'http://localhost:25545/api/html/PriceListCreate');
 }

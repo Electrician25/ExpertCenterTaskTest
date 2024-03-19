@@ -17,7 +17,7 @@ function sendGetListsRequest(uri) {
 }
 
 async function renderPriceListsPage() {
-    let priceLists = await sendGetListsRequest("https://localhost:7043/api/priceList/getall");
+    let priceLists = await sendGetListsRequest("http://localhost:25545/api/priceList/getall");
 
     for(let i = 0; i < priceLists.length; i++)
     {
