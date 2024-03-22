@@ -13,3 +13,4 @@ to launch the application use:
 * ASP.NET Core
 * Entity Framework Core
 * PostgreSQL
+* Docker
